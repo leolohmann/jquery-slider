@@ -23,14 +23,14 @@
 		function scroll (position) {
 			element.animate({ left: position }, options.duration || 500, 'swing', function () {
 				if (current_position() == 0)
-					disable_cursor(options.left);
+					disable_cursor(options.prev);
 				else
-					enable_cursor(options.left);
+					enable_cursor(options.prev);
 
 				if (scroll_remain() == 0)
-					disable_cursor(options.right);
+					disable_cursor(options.next);
 				else
-					enable_cursor(options.right);
+					enable_cursor(options.next);
 			});
 		};
 
@@ -51,32 +51,32 @@
 		};
 
 		function mouse_over (cursor) {
-			$(cursor).addClass(options.activeClass);
+			$(cursor).addClass(options.activedClass);
 		};
 
 		function mouse_out (cursor) {
-			$(cursor).removeClass(options.activeClass);
+			$(cursor).removeClass(options.activedClass);
 		};
 
 		element.css({ width: scroll_size() });
 
-		$(options.left).click(slide_left);
-		$(options.right).click(slide_right);
+		$(options.prev).click(slide_left);
+		$(options.next).click(slide_right);
 
-		$(options.left).mouseover(function () {
-			mouse_over(options.left);
+		$(options.prev).mouseover(function () {
+			mouse_over(options.prev);
 		});
-		$(options.left).mouseout(function () {
-			mouse_out(options.left);
+		$(options.prev).mouseout(function () {
+			mouse_out(options.prev);
 		});
-		$(options.right).mouseover(function () {
-			mouse_over(options.right);
+		$(options.next).mouseover(function () {
+			mouse_over(options.next);
 		});
-		$(options.right).mouseout(function () {
-			mouse_out(options.right);
+		$(options.next).mouseout(function () {
+			mouse_out(options.next);
 		});
 
-		disable_cursor(options.left);
+		disable_cursor(options.prev);
 
 	}
 })(jQuery);
