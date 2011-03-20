@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JQuery Slider Plugin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
+    <link href="css/default.css" rel="stylesheet" type="text/css" media="screen, projection" />
+</head>
+<body>
+    <div class="content">
+        <h1>JQuery slider plugin example</h1>
+        <h2>A simple plugin to slide a set of elements</h2>
+        <div class="slider">
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+                <li>item 8</li>
+                <li>item 9</li>
+                <li>item 10</li>
+                <li>item 11</li>
+                <li>item 12</li>
+                <li>item 13</li>
+                <li>item 14</li>
+                <li>item 15</li>
+                <li>item 16</li>
+                <li>item 17</li>
+                <li>item 18</li>
+                <li>item 19</li>
+                <li>item 20</li>
+                <li>item 21</li>
+                <li>item 22</li>
+                <li>item 23</li>
+                <li>item 24</li>
+                <li>item 25</li>
+                <li>item 26</li>
+                <li>item 27</li>
+                <li>item 28</li>
+                <li>item 29</li>
+                <li>item 30</li>
+            </ul>
+        </div>
+        <div class="paginators">
+            <span class="prev"><<</span>
+            <span class="next">>></span>
+        </div>
+        <code>
+            $(document).ready(function () {<br />
+            	$('ul').slider({left: '.prev',  right: '.next', disabledClass: 'disabled', activeClass: 'active', duration: 500});<br />
+            });
+        </code>
+    </div>
+    <script src="js/jquery-slider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        	$('ul').slider({left: '.prev',  right: '.next', disabledClass: 'disabled', activeClass: 'active', duration: 500});
+        });
+    </script>
+</body>
+</html>
