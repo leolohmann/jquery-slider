@@ -8,7 +8,7 @@
 
 		function scroll_size () {
 			var items = element.children();
-			var child = (items.size() > 0) ? items.eq(1) : items.eq(0); /* prevent custom margin for the first element */
+			var child = (items.size() > 1) ? items.eq(1) : items.eq(0); /* prevent custom margin for the first element */
 			return (child.outerWidth() + parseInt(child.css('marginLeft')) + parseInt(child.css('marginRight'))) * items.size();
 		};
 
